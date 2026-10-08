@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Para Leslie</title>
+<meta name="description" content="Una felicitación de cumpleaños para Leslie">
+<meta name="theme-color" content="#070d33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#f5f1e3;--gold:#f4dd7c;--sea:#bfe8ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:#071a2c;color:var(--ink);font-family:'Jost','Helvetica Neue',sans-serif;overflow-x:hidden}
+.wrap{position:relative;background:linear-gradient(#070d33 0,#0f2468 14%,#27498a 30%,#3b6a98 40%,#2a5670 50%,#123649 60%,#071a2c 66%,#071a2c 100%)}
+section{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:8vh 7vw;overflow:hidden}
+h1,h2,p.big{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:300;letter-spacing:-.01em;line-height:1.12;text-wrap:balance}
+h1{font-size:clamp(2.8rem,9vw,7.2rem);text-shadow:0 0 40px rgba(244,221,124,.35)}
+h2,p.big{font-size:clamp(1.9rem,5vw,3.7rem);max-width:19em}
+.sub{font-size:clamp(1rem,2vw,1.3rem);font-weight:300;letter-spacing:.04em;margin-top:1.6rem;opacity:.85}
+.txt{position:relative;z-index:5}
+/* revelado */
+.rv{opacity:0;transform:translateY(24px);filter:blur(8px);transition:opacity 1.6s ease,transform 1.6s ease,filter 1.6s ease}
+.rv.in{opacity:1;transform:none;filter:none}
+.d2{transition-delay:.9s}
+/* S1 */
+#s1{align-items:center}
+#sky{position:absolute;inset:0;width:100%;height:100%;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.hint{position:absolute;bottom:5vh;left:50%;translate:-50% 0;font-size:.9rem;letter-spacing:.1em;opacity:.6;animation:hint 2.6s ease-in-out infinite}
+.hint:after{content:"";display:block;width:1px;height:34px;margin:10px auto 0;background:linear-gradient(var(--ink),transparent)}
+@keyframes hint{50%{transform:translateY(8px);opacity:.25}}
+/* S2 */
+#s2{align-items:flex-start;padding-top:20vh}
+.moon2{position:absolute;top:8vh;right:12vw;width:min(16vw,120px);aspect-ratio:1;border-radius:50%;background:radial-gradient(#fff6d8 30%,#f3e3a6 60%,transparent 72%);box-shadow:0 0 90px 40px rgba(190,215,255,.22)}
+.mist{position:absolute;left:-20%;width:140%;height:34%;bottom:14%;background:radial-gradient(ellipse at 50% 50%,rgba(170,205,230,.22),transparent 65%);animation:mist 18s ease-in-out infinite alternate}
+@keyframes mist{to{transform:translateX(9%)}}
+.trees{position:absolute;left:0;bottom:-1px;width:100%;height:62%}
+.trees svg{position:absolute;left:0;bottom:0;width:100%;height:100%;will-change:transform}
+.ff{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffe98a;box-shadow:0 0 10px 3px rgba(255,233,138,.7);animation:ff var(--t) ease-in-out infinite,bl 3s ease-in-out infinite var(--b)}
+@keyframes ff{50%{transform:translate(var(--x),var(--y))}}
+@keyframes bl{50%{opacity:.15}}
+/* S3 */
+#s3{background:linear-gradient(#071a2c,#0a3a58 35%,#0a4a66 55%,#04203a)}
+.waves{position:absolute;top:0;left:0;width:200%;height:90px;animation:wv 14s linear infinite}
+.waves.b{opacity:.55;animation-duration:22s;animation-direction:reverse;top:14px}
+@keyframes wv{to{transform:translateX(-50%)}}
+.rays{position:absolute;top:0;left:0;right:0;height:80%;background:repeating-linear-gradient(100deg,transparent 0 9%,rgba(160,230,240,.07) 11% 14%,transparent 16% 24%);transform-origin:50% 0;animation:ray 12s ease-in-out infinite alternate;-webkit-mask-image:linear-gradient(#000,transparent);mask-image:linear-gradient(#000,transparent)}
+@keyframes ray{from{transform:skewX(-6deg)}to{transform:skewX(6deg)}}
+.fish{position:absolute;left:0;width:var(--s);animation:sw var(--d) linear infinite;animation-delay:var(--l);opacity:.9;will-change:transform}
+.fish svg{display:block;width:100%;animation:bob 3s ease-in-out infinite;animation-delay:var(--l)}
+@keyframes sw{from{transform:translateX(-15vw)}to{transform:translateX(115vw)}}
+@keyframes swr{from{transform:translateX(115vw)}to{transform:translateX(-15vw)}}
+.fish.r{animation-name:swr}.fish.r svg{transform:scaleX(-1)}
+@keyframes bob{50%{translate:0 14px}}
+.whale{position:absolute;left:0;width:min(46vw,460px);animation:sw 70s linear infinite;animation-delay:-20s;opacity:.85}
+.whale svg{width:100%;display:block;animation:wb 7s ease-in-out infinite}
+.whale.two{width:min(24vw,240px);animation-name:swr;animation-duration:95s;animation-delay:-60s;opacity:.55}
+@keyframes wb{50%{transform:translateY(-28px) rotate(-3deg)}}
+.bub{position:absolute;bottom:-20px;border-radius:50%;border:1px solid rgba(200,240,250,.45);background:rgba(200,240,250,.08);animation:up var(--d) linear infinite;animation-delay:var(--l)}
+@keyframes up{to{transform:translateY(-110vh) translateX(20px)}}
+#s3 .txt{max-width:30em}
+#s3 p.big{font-size:clamp(1.5rem,3.6vw,2.7rem);color:#eaf9fb;text-shadow:0 2px 30px rgba(2,20,40,.8)}
+.fin{margin-top:2rem;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.2rem,2.4vw,1.7rem);color:var(--gold)}
+@media(max-width:700px){
+section{padding:9vh 7vw}
+h1{font-size:clamp(2.6rem,13vw,4rem)}
+h2,p.big{font-size:clamp(1.7rem,7vw,2.3rem)}
+#s3 p.big{font-size:clamp(1.35rem,5.6vw,1.9rem)}
+#s2{padding-top:15vh}
+.moon2{width:68px;right:8vw;top:5vh}
+.trees{height:52%}
+.whale{width:78vw}.whale.two{width:40vw}
+.fish{--s:30px!important}
+.waves{height:60px}
+}
+@media(min-width:1600px){.wrap{max-width:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="s1">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="txt">
+    <h1 class="rv in">Feliz cumpleaños,<br>Leslie</h1>
+    <p class="sub rv in d2">Que tu día brille tanto como este cielo. Pásatela increíble.</p>
+  </div>
+  <div class="hint">desliza</div>
+</section>
+
+<section id="s2">
+  <div class="moon2"></div>
+  <div class="txt"><p class="big rv">Todo el equipo de UM te manda esta felicitación.<br>Gracias por ayudarnos tanto.</p></div>
+  <div class="mist"></div>
+  <div class="trees" id="trees"></div>
+</section>
+
+<section id="s3">
+  <svg class="waves" viewBox="0 0 2880 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#0a3a58" d="M0 40Q180 0 360 40T720 40T1080 40T1440 40T1800 40T2160 40T2520 40T2880 40V0H0Z"/></svg>
+  <svg class="waves b" viewBox="0 0 2880 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#3f8fa6" d="M0 40Q180 80 360 40T720 40T1080 40T1440 40T1800 40T2160 40T2520 40T2880 40V0H0Z"/></svg>
+  <div class="rays"></div>
+  <div id="life" aria-hidden="true"></div>
+  <div class="txt">
+    <p class="big rv">Les, esta felicitación la creamos con mucho cariño especialmente para ti. Espero que te guste mucho.</p>
+    <p class="fin rv d2">Sigue teniendo esa energía tan característica tuya.</p>
+  </div>
+</section>
+
+</div>
+<script>
+const R=(a,b)=>a+Math.random()*(b-a);
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* ---------- cielo tipo Van Gogh ---------- */
+(()=>{
+const c=document.getElementById('sky'),x=c.getContext('2d');let W,H,S=[];
+const sw=[[.72,.3,.2],[.3,.42,.15],[.5,.18,.12]];
+const pal=['#f4e27a','#9ec1ff','#e8f0ff','#5b86d6','#3a62b8','#c9dcff'];
+function rs(){const d=Math.min(devicePixelRatio||1,2);W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+S=Array.from({length:Math.round(W*H/1500)},()=>({x:R(0,W),y:R(0,H),c:pal[Math.random()*pal.length|0],w:R(1.5,3.6),a:R(.25,.8)}))}
+function ang(px,py,t){let vx=Math.cos(Math.sin(px*.006+t*.3)*.7+Math.cos(py*.008-t*.2)*.7),vy=Math.sin(Math.sin(px*.006+t*.3)*.7+Math.cos(py*.008-t*.2)*.7);
+for(const[sx,sy,r]of sw){const dx=px-sx*W,dy=py-sy*H,R2=(r*Math.min(W,H)*1.6)**2,w=Math.exp(-(dx*dx+dy*dy)/R2),d=Math.hypot(dx,dy)||1;vx+=w*4*-dy/d;vy+=w*4*dx/d}
+return Math.atan2(vy,vx)}
+const stars=[[.12,.2,26],[.45,.1,20],[.88,.5,22],[.58,.46,18],[.22,.62,16]];
+function frame(ms){const t=ms/1000;x.clearRect(0,0,W,H);x.lineCap='round';
+for(const s of S){let px=s.x,py=s.y;x.strokeStyle=s.c;x.globalAlpha=s.a;x.lineWidth=s.w;x.beginPath();x.moveTo(px,py);
+for(let i=0;i<5;i++){const a=ang(px,py,t);px+=Math.cos(a)*7;py+=Math.sin(a)*7;x.lineTo(px,py)}x.stroke()}
+x.globalAlpha=1;
+for(const[sx,sy,r]of stars){const cx=sx*W,cy=sy*H,p=1+Math.sin(t*1.4+sx*20)*.12,g=x.createRadialGradient(cx,cy,0,cx,cy,r*3.4*p);
+g.addColorStop(0,'rgba(255,248,200,1)');g.addColorStop(.25,'rgba(250,225,110,.7)');g.addColorStop(1,'rgba(250,225,110,0)');x.fillStyle=g;x.beginPath();x.arc(cx,cy,r*3.4*p,0,7);x.fill();
+for(let k=1;k<=3;k++){x.strokeStyle=k%2?'rgba(250,230,130,.55)':'rgba(160,195,255,.5)';x.lineWidth=2.2;x.beginPath();x.arc(cx,cy,r*(1+k*.55)*p,t*.2*k,t*.2*k+4.6);x.stroke()}}
+if(!reduce)requestAnimationFrame(frame)}
+addEventListener('resize',rs);rs();requestAnimationFrame(frame);
+})();
+/* ---------- bosque ---------- */
+(()=>{
+const el=document.getElementById('trees'),cols=['#2a5470','#1a3a52','#0f2538','#071a2c'],hs=[.62,.5,.4,.26],L=[];
+cols.forEach((col,i)=>{let d='',x=-40;const base=100,H=hs[i]*100*1.5,wd=[34,40,48,60][i];
+while(x<1500){const h=H*R(.55,1.2),w=R(wd*.6,wd);let p=`M${x-w},${base} `;
+for(let k=0;k<4;k++){const yy=base-h*(k+1)/4,ww=w*(1-k*.22);p+=`L${x-ww*.55},${yy+h*.06} L${x-ww*.3},${yy+h*.06} `}
+p+=`L${x},${base-h} `;
+for(let k=3;k>=0;k--){const yy=base-h*(k+1)/4,ww=w*(1-k*.22);p+=`L${x+ww*.3},${yy+h*.06} L${x+ww*.55},${yy+h*.06} `}
+d+=p+`L${x+w},${base}Z `;x+=R(wd*.5,wd*1.1)}
+d+=`M-40,${base}H1500V${base+10}H-40Z`;
+const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 1440 100');s.setAttribute('preserveAspectRatio','none');
+s.innerHTML=`<path fill="${col}" d="${d}"/>`;el.appendChild(s);L.push(s)});
+const sec=document.getElementById('s2');
+for(let i=0;i<26;i++){const f=document.createElement('i');f.className='ff';f.style.cssText=`left:${R(4,96)}%;top:${R(35,85)}%;--x:${R(-40,40)}px;--y:${R(-50,30)}px;--t:${R(6,12)}s;--b:${R(0,3)}s;animation-delay:${-R(0,8)}s,${-R(0,3)}s`;sec.appendChild(f)}
+if(!reduce)addEventListener('scroll',()=>{const r=sec.getBoundingClientRect(),p=Math.max(-1,Math.min(1,r.top/innerHeight));L.forEach((s,i)=>s.style.transform=`translateY(${-p*(4-i)*-9}px)`)},{passive:true});
+})();
+/* ---------- océano ---------- */
+(()=>{
+const el=document.getElementById('life'),fc=['#ffb86b','#7fd6e6','#f6e08a','#9bb8ff','#ff8f8f'];
+const fish=c=>`<svg viewBox="0 0 40 20"><path fill="${c}" d="M0 10Q12-3 28 10Q12 23 0 10ZM26 10L40 2V18Z"/><circle cx="8" cy="8.5" r="1.3" fill="#04203a"/></svg>`;
+const wh=c=>`<svg viewBox="0 0 320 130"><path fill="${c}" d="M8 62C40 18 150 8 228 40C255 52 275 44 296 12C304 38 296 58 276 68C298 80 306 98 304 118C282 100 258 90 230 84C150 112 50 108 8 62Z"/><path fill="rgba(255,255,255,.12)" d="M40 70C90 92 170 98 226 82C150 108 60 100 40 70Z"/><circle cx="52" cy="58" r="2.4" fill="#04203a"/></svg>`;
+for(let i=0;i<24;i++){const d=document.createElement('div'),r=Math.random()<.5;d.className='fish'+(r?' r':'');
+d.style.cssText=`top:${R(18,88)}%;--s:${R(22,56)}px;--d:${R(22,48)}s;--l:${-R(0,40)}s`;d.innerHTML=fish(fc[i%5]);el.appendChild(d)}
+[['',"#0c3552"],['two',"#154a68"]].forEach(([k,c],i)=>{const d=document.createElement('div');d.className='whale '+k;d.style.top=i?'20%':'58%';d.innerHTML=wh(c);el.appendChild(d)});
+for(let i=0;i<30;i++){const b=document.createElement('i');b.className='bub';const s=R(4,14);b.style.cssText=`left:${R(0,100)}%;width:${s}px;height:${s}px;--d:${R(9,20)}s;--l:${-R(0,18)}s`;el.appendChild(b)}
+})();
+/* ---------- revelado al hacer scroll ---------- */
+const io=new IntersectionObserver(e=>e.forEach(n=>{if(n.isIntersecting){n.target.classList.add('in');io.unobserve(n.target)}}),{threshold:.35});
+document.querySelectorAll('.rv:not(.in)').forEach(n=>io.observe(n));
+</script>
+</body>
+</html>
